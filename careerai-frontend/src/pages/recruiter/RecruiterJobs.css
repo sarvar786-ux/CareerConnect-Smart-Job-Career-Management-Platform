@@ -1,0 +1,864 @@
+/* =========================================================
+   RECRUITER JOBS PAGE
+   CareerAI - Manage Jobs
+   ========================================================= */
+
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
+
+.recruiter-jobs-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.recruiter-jobs-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #111827;
+  color: #ffffff;
+
+  padding: 28px 18px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.recruiter-jobs-logo {
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+
+  padding: 0 14px;
+  margin-bottom: 45px;
+}
+
+.recruiter-jobs-logo span {
+  color: #6366f1;
+}
+
+
+/* =========================================================
+   SIDEBAR MENU
+   ========================================================= */
+
+.recruiter-jobs-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+/* =========================================================
+   MENU ITEMS
+   ========================================================= */
+
+.recruiter-jobs-menu-item {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 13px 15px;
+
+  background: transparent;
+  color: #cbd5e1;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.recruiter-jobs-menu-item span {
+  width: 22px;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+/* HOVER */
+
+.recruiter-jobs-menu-item:hover {
+  background: #1f2937;
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+
+/* ACTIVE */
+
+.recruiter-jobs-menu-item.active {
+  background: #4f46e5;
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.25);
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+   ========================================================= */
+
+.recruiter-jobs-sidebar-bottom {
+  margin-top: auto;
+}
+
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.recruiter-jobs-menu-item.logout {
+  color: #fca5a5;
+}
+
+.recruiter-jobs-menu-item.logout:hover {
+  background: #3f1d1d;
+  color: #fecaca;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.recruiter-jobs-main {
+  margin-left: 250px;
+
+  width: calc(100% - 250px);
+
+  min-height: 100vh;
+
+  padding: 40px 50px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.recruiter-jobs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 30px;
+}
+
+.recruiter-jobs-header h1 {
+  margin: 0 0 8px;
+
+  font-size: 32px;
+  font-weight: 750;
+
+  color: #111827;
+}
+
+.recruiter-jobs-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   POST NEW JOB BUTTON
+   ========================================================= */
+
+.recruiter-jobs-post-button {
+  border: none;
+  border-radius: 10px;
+
+  padding: 13px 20px;
+
+  background: #4f46e5;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.recruiter-jobs-post-button:hover {
+  background: #4338ca;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(79, 70, 229, 0.25);
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+   ========================================================= */
+
+.recruiter-jobs-error {
+  margin-bottom: 20px;
+
+  padding: 14px 18px;
+
+  border-radius: 10px;
+
+  background: #fef2f2;
+  color: #b91c1c;
+
+  border: 1px solid #fecaca;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   SUCCESS MESSAGE
+   ========================================================= */
+
+.recruiter-jobs-success {
+  margin-bottom: 20px;
+
+  padding: 14px 18px;
+
+  border-radius: 10px;
+
+  background: #ecfdf5;
+  color: #047857;
+
+  border: 1px solid #a7f3d0;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.recruiter-jobs-empty {
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  padding: 50px 30px;
+
+  box-shadow:
+    0 5px 20px rgba(15, 23, 42, 0.04);
+}
+
+.recruiter-jobs-empty-icon {
+  width: 80px;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eef2ff;
+
+  font-size: 38px;
+
+  margin-bottom: 20px;
+}
+
+.recruiter-jobs-empty h2 {
+  margin: 0 0 10px;
+
+  color: #111827;
+
+  font-size: 23px;
+}
+
+.recruiter-jobs-empty p {
+  margin: 0 0 25px;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+.recruiter-jobs-empty button {
+  border: none;
+  border-radius: 9px;
+
+  padding: 12px 20px;
+
+  background: #4f46e5;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.recruiter-jobs-empty button:hover {
+  background: #4338ca;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   JOB LIST
+   ========================================================= */
+
+.recruiter-jobs-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   JOB CARD
+   ========================================================= */
+
+.recruiter-job-card {
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 16px;
+
+  padding: 26px;
+
+  box-shadow:
+    0 5px 20px rgba(15, 23, 42, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.recruiter-job-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   JOB CARD HEADER
+   ========================================================= */
+
+.recruiter-job-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 18px;
+}
+
+.recruiter-job-card-header h2 {
+  margin: 0 0 7px;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.recruiter-job-company {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   JOB TYPE BADGE
+   ========================================================= */
+
+.recruiter-job-type {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  background: #eef2ff;
+  color: #4f46e5;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   JOB DETAILS
+   ========================================================= */
+
+.recruiter-job-details {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px 25px;
+
+  padding: 15px 0;
+
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+
+  margin-bottom: 18px;
+
+  color: #4b5563;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   JOB DESCRIPTION
+   ========================================================= */
+
+.recruiter-job-description {
+  margin: 0 0 18px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.recruiter-job-skills {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 22px;
+}
+
+.recruiter-job-skills span {
+  padding: 6px 11px;
+
+  border-radius: 6px;
+
+  background: #f3f4f6;
+
+  color: #4b5563;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.recruiter-job-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+
+  gap: 9px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #f1f5f9;
+}
+
+.recruiter-job-actions button {
+  border-radius: 8px;
+
+  padding: 9px 14px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.recruiter-job-actions button:hover {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+   ========================================================= */
+
+.recruiter-job-view-button {
+  border: 1px solid #dbeafe;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+.recruiter-job-view-button:hover {
+  background: #dbeafe;
+}
+
+
+/* =========================================================
+   EDIT BUTTON
+   ========================================================= */
+
+.recruiter-job-edit-button {
+  border: 1px solid #ddd6fe;
+
+  background: #f5f3ff;
+
+  color: #7c3aed;
+}
+
+.recruiter-job-edit-button:hover {
+  background: #ede9fe;
+}
+
+
+/* =========================================================
+   APPLICATION BUTTON
+   ========================================================= */
+
+.recruiter-job-application-button {
+  border: 1px solid #a7f3d0;
+
+  background: #ecfdf5;
+
+  color: #047857;
+}
+
+.recruiter-job-application-button:hover {
+  background: #d1fae5;
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+   ========================================================= */
+
+.recruiter-job-delete-button {
+  border: 1px solid #fecaca;
+
+  background: #fef2f2;
+
+  color: #dc2626;
+}
+
+.recruiter-job-delete-button:hover {
+  background: #fee2e2;
+}
+
+.recruiter-job-delete-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   LOADING SCREEN
+   ========================================================= */
+
+.recruiter-jobs-loading {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f7fb;
+
+  color: #6b7280;
+}
+
+.recruiter-jobs-loading p {
+  margin-top: 15px;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   LOADING SPINNER
+   ========================================================= */
+
+.recruiter-jobs-spinner {
+  width: 42px;
+  height: 42px;
+
+  border: 4px solid #e5e7eb;
+
+  border-top-color: #4f46e5;
+
+  border-radius: 50%;
+
+  animation:
+    recruiter-jobs-spin 0.8s linear infinite;
+}
+
+@keyframes recruiter-jobs-spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .recruiter-jobs-sidebar {
+    width: 220px;
+  }
+
+  .recruiter-jobs-main {
+    margin-left: 220px;
+
+    width: calc(100% - 220px);
+
+    padding: 35px 30px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .recruiter-jobs-page {
+    display: block;
+  }
+
+
+  .recruiter-jobs-sidebar {
+    width: 100%;
+
+    min-height: auto;
+
+    position: relative;
+
+    padding: 18px;
+
+  }
+
+
+  .recruiter-jobs-logo {
+    margin-bottom: 20px;
+
+    padding: 0 5px;
+  }
+
+
+  .recruiter-jobs-menu {
+    flex-direction: row;
+
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+  }
+
+
+  .recruiter-jobs-menu-item {
+    width: auto;
+
+    min-width: max-content;
+
+    padding: 10px 13px;
+  }
+
+
+  .recruiter-jobs-sidebar-bottom {
+    margin-top: 15px;
+  }
+
+
+  .recruiter-jobs-main {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding: 25px 18px;
+  }
+
+
+  .recruiter-jobs-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .recruiter-jobs-header h1 {
+    font-size: 27px;
+  }
+
+
+  .recruiter-jobs-post-button {
+    width: 100%;
+  }
+
+
+  .recruiter-job-card {
+    padding: 20px;
+  }
+
+
+  .recruiter-job-card-header {
+    flex-direction: column;
+  }
+
+
+  .recruiter-job-type {
+    align-self: flex-start;
+  }
+
+
+  .recruiter-job-actions {
+    justify-content: stretch;
+  }
+
+
+  .recruiter-job-actions button {
+    flex: 1;
+
+    min-width: 120px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .recruiter-jobs-main {
+    padding: 20px 12px;
+  }
+
+
+  .recruiter-jobs-header h1 {
+    font-size: 24px;
+  }
+
+
+  .recruiter-job-card {
+    padding: 16px;
+  }
+
+
+  .recruiter-job-details {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .recruiter-job-actions {
+    flex-direction: column;
+  }
+
+
+  .recruiter-job-actions button {
+    width: 100%;
+  }
+
+}

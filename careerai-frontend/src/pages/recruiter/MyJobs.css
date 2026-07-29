@@ -1,0 +1,615 @@
+/* =========================================
+   CAREERAI MY JOBS PAGE
+========================================= */
+
+.careerai-myjobs-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f5f7fb;
+  color: #1e293b;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.careerai-myjobs-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: #111827;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+
+.careerai-myjobs-logo {
+  font-size: 28px;
+  font-weight: 800;
+  padding: 28px 25px;
+  letter-spacing: -1px;
+}
+
+.careerai-myjobs-logo span {
+  color: #6366f1;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.careerai-myjobs-menu {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.careerai-myjobs-menu-item {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #cbd5e1;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.25s ease;
+}
+
+
+.careerai-myjobs-menu-item span {
+  width: 24px;
+  font-size: 18px;
+}
+
+
+.careerai-myjobs-menu-item:hover {
+  background: #1f2937;
+  color: white;
+}
+
+
+.careerai-myjobs-menu-item.active {
+  background: #4f46e5;
+  color: white;
+}
+
+
+.careerai-myjobs-sidebar-bottom {
+  margin-top: auto;
+  padding: 15px;
+}
+
+
+.careerai-myjobs-menu-item.logout:hover {
+  background: #7f1d1d;
+  color: white;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.careerai-myjobs-main {
+  flex: 1;
+  margin-left: 250px;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.careerai-myjobs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+
+.careerai-myjobs-header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  font-weight: 750;
+  color: #111827;
+}
+
+
+.careerai-myjobs-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 15px;
+}
+
+
+.careerai-myjobs-post-button {
+  border: none;
+  background: #4f46e5;
+  color: white;
+  padding: 13px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+
+.careerai-myjobs-post-button:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   COMPANY BANNER
+========================================= */
+
+.careerai-myjobs-company-banner {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+
+.careerai-myjobs-company-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  background: #eef2ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+.careerai-myjobs-company-banner h2 {
+  margin: 0 0 4px;
+  font-size: 19px;
+  color: #1e293b;
+}
+
+
+.careerai-myjobs-company-banner p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+
+.careerai-myjobs-company-count {
+  margin-left: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+
+.careerai-myjobs-company-count strong {
+  font-size: 25px;
+  color: #4f46e5;
+}
+
+
+.careerai-myjobs-company-count span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+
+/* =========================================
+   ALERTS
+========================================= */
+
+.careerai-myjobs-error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+
+.careerai-myjobs-success {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   JOB GRID
+========================================= */
+
+.careerai-myjobs-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fill, minmax(340px, 1fr));
+  gap: 22px;
+}
+
+
+/* =========================================
+   JOB CARD
+========================================= */
+
+.careerai-myjobs-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow:
+    0 5px 20px rgba(15, 23, 42, 0.05);
+  transition: 0.25s ease;
+}
+
+
+.careerai-myjobs-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 30px rgba(15, 23, 42, 0.1);
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.careerai-myjobs-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+
+.careerai-myjobs-job-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: #eef2ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+
+.careerai-myjobs-card-header h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  color: #1e293b;
+}
+
+
+.careerai-myjobs-card-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+
+/* =========================================
+   JOB DETAILS
+========================================= */
+
+.careerai-myjobs-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+
+.careerai-myjobs-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.careerai-myjobs-detail span {
+  width: 25px;
+}
+
+
+.careerai-myjobs-detail p {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   SALARY
+========================================= */
+
+.careerai-myjobs-salary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #15803d;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.careerai-myjobs-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+
+.careerai-myjobs-skills span {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.careerai-myjobs-description {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.careerai-myjobs-actions {
+  display: flex;
+  gap: 8px;
+  padding-top: 18px;
+  border-top: 1px solid #e2e8f0;
+}
+
+
+.careerai-myjobs-actions button {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+
+.careerai-myjobs-view-button {
+  border: 1px solid #cbd5e1;
+  background: white;
+  color: #475569;
+}
+
+
+.careerai-myjobs-view-button:hover {
+  background: #f8fafc;
+}
+
+
+.careerai-myjobs-edit-button {
+  border: none;
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+
+.careerai-myjobs-edit-button:hover {
+  background: #e0e7ff;
+}
+
+
+.careerai-myjobs-delete-button {
+  border: none;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+
+.careerai-myjobs-delete-button:hover {
+  background: #fee2e2;
+}
+
+
+.careerai-myjobs-delete-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.careerai-myjobs-empty {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 60px 30px;
+  text-align: center;
+  box-shadow:
+    0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+
+.careerai-myjobs-empty-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+
+.careerai-myjobs-empty h2 {
+  margin: 0 0 10px;
+  color: #1e293b;
+}
+
+
+.careerai-myjobs-empty p {
+  max-width: 500px;
+  margin: 0 auto 25px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+
+.careerai-myjobs-empty button {
+  border: none;
+  background: #4f46e5;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 9px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.careerai-myjobs-empty button:hover {
+  background: #4338ca;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.careerai-myjobs-loading {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fb;
+  color: #64748b;
+}
+
+
+.careerai-myjobs-spinner {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #4f46e5;
+  border-radius: 50%;
+  animation: careeraiMyJobsSpin 0.8s linear infinite;
+  margin-bottom: 15px;
+}
+
+
+@keyframes careeraiMyJobsSpin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .careerai-myjobs-sidebar {
+    width: 210px;
+  }
+
+  .careerai-myjobs-main {
+    margin-left: 210px;
+    padding: 25px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .careerai-myjobs-sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .careerai-myjobs-page {
+    flex-direction: column;
+  }
+
+  .careerai-myjobs-main {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .careerai-myjobs-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .careerai-myjobs-company-banner {
+    flex-wrap: wrap;
+  }
+
+  .careerai-myjobs-company-count {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .careerai-myjobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

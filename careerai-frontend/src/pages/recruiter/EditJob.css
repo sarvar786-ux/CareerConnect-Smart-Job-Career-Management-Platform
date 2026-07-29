@@ -1,0 +1,512 @@
+/* =========================================================
+   CAREERAI EDIT JOB PAGE
+   ========================================================= */
+
+.careerai-editjob-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.careerai-editjob-sidebar {
+  width: 250px;
+  min-height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px 18px;
+
+  box-sizing: border-box;
+
+  background: #111827;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.careerai-editjob-logo {
+  padding: 0 14px;
+  margin-bottom: 45px;
+
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.careerai-editjob-logo span {
+  color: #6366f1;
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.careerai-editjob-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.careerai-editjob-menu-item {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 13px 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+  color: #cbd5e1;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition: 0.2s ease;
+}
+
+.careerai-editjob-menu-item span {
+  width: 22px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.careerai-editjob-menu-item:hover {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+.careerai-editjob-menu-item.active {
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+.careerai-editjob-sidebar-bottom {
+  margin-top: auto;
+}
+
+.careerai-editjob-menu-item.logout {
+  color: #fca5a5;
+}
+
+.careerai-editjob-menu-item.logout:hover {
+  background: #3f1d1d;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.careerai-editjob-main {
+  margin-left: 250px;
+
+  width: calc(100% - 250px);
+
+  min-height: 100vh;
+
+  padding: 40px 50px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.careerai-editjob-header {
+  margin-bottom: 25px;
+}
+
+.careerai-editjob-header h1 {
+  margin: 15px 0 7px;
+
+  font-size: 32px;
+  color: #111827;
+}
+
+.careerai-editjob-header p {
+  margin: 0;
+
+  color: #6b7280;
+}
+
+.careerai-editjob-back-button {
+  border: none;
+  background: transparent;
+
+  color: #4f46e5;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+.careerai-editjob-back-button:hover {
+  color: #3730a3;
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.careerai-editjob-error {
+  padding: 14px 18px;
+
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+
+  color: #b91c1c;
+}
+
+.careerai-editjob-success {
+  padding: 14px 18px;
+
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+
+  color: #047857;
+}
+
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.careerai-editjob-card {
+  max-width: 900px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  padding: 32px;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.careerai-editjob-card-header {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 30px;
+
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.careerai-editjob-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #eef2ff;
+
+  color: #4f46e5;
+
+  font-size: 23px;
+}
+
+.careerai-editjob-card-header h2 {
+  margin: 0 0 5px;
+
+  font-size: 21px;
+
+  color: #111827;
+}
+
+.careerai-editjob-card-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.careerai-editjob-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.careerai-editjob-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.careerai-editjob-form-group label {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #374151;
+}
+
+.careerai-editjob-form-group input,
+.careerai-editjob-form-group textarea,
+.careerai-editjob-form-group select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.careerai-editjob-form-group input:focus,
+.careerai-editjob-form-group textarea:focus,
+.careerai-editjob-form-group select:focus {
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.careerai-editjob-form-group textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.careerai-editjob-form-group small {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   FORM ROW
+   ========================================================= */
+
+.careerai-editjob-form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.careerai-editjob-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 10px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #f1f5f9;
+}
+
+.careerai-editjob-cancel-button,
+.careerai-editjob-save-button {
+  padding: 12px 20px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.careerai-editjob-cancel-button {
+  border: 1px solid #d1d5db;
+
+  background: #ffffff;
+
+  color: #4b5563;
+}
+
+.careerai-editjob-cancel-button:hover {
+  background: #f9fafb;
+}
+
+.careerai-editjob-save-button {
+  border: none;
+
+  background: #4f46e5;
+
+  color: #ffffff;
+}
+
+.careerai-editjob-save-button:hover {
+  background: #4338ca;
+
+  transform: translateY(-1px);
+}
+
+.careerai-editjob-save-button:disabled,
+.careerai-editjob-cancel-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.careerai-editjob-loading {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f7fb;
+
+  color: #6b7280;
+}
+
+.careerai-editjob-spinner {
+  width: 42px;
+  height: 42px;
+
+  border: 4px solid #e5e7eb;
+
+  border-top-color: #4f46e5;
+
+  border-radius: 50%;
+
+  animation:
+    careerai-editjob-spin 0.8s linear infinite;
+}
+
+@keyframes careerai-editjob-spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .careerai-editjob-sidebar {
+    position: relative;
+
+    width: 100%;
+
+    min-height: auto;
+  }
+
+  .careerai-editjob-page {
+    display: block;
+  }
+
+  .careerai-editjob-main {
+    width: 100%;
+
+    margin-left: 0;
+
+    padding: 25px 18px;
+  }
+
+  .careerai-editjob-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .careerai-editjob-card {
+    padding: 22px;
+  }
+
+  .careerai-editjob-actions {
+    flex-direction: column;
+  }
+
+  .careerai-editjob-cancel-button,
+  .careerai-editjob-save-button {
+    width: 100%;
+  }
+
+}

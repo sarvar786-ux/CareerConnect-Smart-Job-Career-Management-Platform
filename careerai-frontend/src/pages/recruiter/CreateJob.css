@@ -1,0 +1,879 @@
+/* =========================================
+   CREATE JOB PAGE
+   UNIQUE PREFIX: cj-
+========================================= */
+
+.cj-page {
+  min-height: 100vh;
+  display: flex;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(99, 102, 241, 0.08),
+      transparent 30%
+    ),
+    #0b0b12;
+
+  color: #f8fafc;
+}
+
+
+/* =========================================
+   CREATE JOB SIDEBAR
+========================================= */
+
+.cj-sidebar {
+  width: 250px;
+  min-width: 250px;
+
+  min-height: 100vh;
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px 18px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      180deg,
+      #11111b,
+      #0d0d15
+    );
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+
+  z-index: 100;
+}
+
+
+/* =========================================
+   CREATE JOB LOGO
+========================================= */
+
+.cj-logo {
+  padding: 0 14px;
+
+  margin-bottom: 45px;
+
+  font-size: 25px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+
+  color: #f8fafc;
+}
+
+.cj-logo span {
+  color: #8b5cf6;
+}
+
+
+/* =========================================
+   CREATE JOB MENU
+========================================= */
+
+.cj-menu {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+/* =========================================
+   CREATE JOB MENU ITEM
+========================================= */
+
+.cj-menu-item {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 13px 15px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.cj-menu-item span {
+  width: 22px;
+
+  min-width: 22px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 17px;
+}
+
+.cj-menu-item:hover {
+  background:
+    rgba(139, 92, 246, 0.1);
+
+  color: #c4b5fd;
+
+  transform:
+    translateX(3px);
+}
+
+
+/* =========================================
+   ACTIVE MENU
+========================================= */
+
+.cj-menu-item.cj-active {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(139, 92, 246, 0.22),
+      rgba(99, 102, 241, 0.12)
+    );
+
+  color: #c4b5fd;
+
+  border:
+    1px solid
+    rgba(139, 92, 246, 0.18);
+}
+
+
+/* =========================================
+   SIDEBAR BOTTOM
+========================================= */
+
+.cj-sidebar-bottom {
+  margin-top: auto;
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.cj-menu-item.cj-logout {
+  color: #f87171;
+}
+
+.cj-menu-item.cj-logout:hover {
+  background:
+    rgba(239, 68, 68, 0.1);
+
+  color: #fca5a5;
+}
+
+
+/* =========================================
+   CREATE JOB MAIN CONTENT
+========================================= */
+
+.cj-main {
+  width: calc(100% - 250px);
+
+  min-height: 100vh;
+
+  margin-left: 250px;
+
+  padding: 40px 50px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.cj-back-button {
+  display: block;
+
+  max-width: 1000px;
+
+  margin:
+    0 auto 20px;
+
+  padding: 8px 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #a78bfa;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.cj-back-button:hover {
+  color: #c4b5fd;
+
+  transform:
+    translateX(-4px);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.cj-header {
+  max-width: 1000px;
+
+  margin:
+    0 auto 30px;
+}
+
+.cj-header h1 {
+  margin:
+    0 0 8px;
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  color: #f8fafc;
+}
+
+.cj-header p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.cj-card {
+  width: 100%;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(24, 24, 38, 0.96),
+      rgba(15, 15, 25, 0.96)
+    );
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 20px 50px
+    rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.cj-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+
+/* =========================================
+   FORM ROW
+========================================= */
+
+.cj-form-row {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.cj-form-group {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.cj-full-width {
+  width: 100%;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.cj-form-group label {
+  color: #cbd5e1;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.cj-form-group label span {
+  color: #f87171;
+}
+
+
+/* =========================================
+   INPUT / SELECT / TEXTAREA
+========================================= */
+
+.cj-form-group input,
+.cj-form-group select,
+.cj-form-group textarea {
+  width: 100%;
+
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    13px 15px;
+
+  border:
+    1px solid
+    #272733;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #181820;
+
+  color: #f8fafc;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.cj-form-group input:focus,
+.cj-form-group select:focus,
+.cj-form-group textarea:focus {
+  border-color: #8b5cf6;
+
+  background: #1b1b25;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(139, 92, 246, 0.12);
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.cj-form-group input::placeholder,
+.cj-form-group textarea::placeholder {
+  color: #475569;
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.cj-form-group select {
+  cursor: pointer;
+}
+
+.cj-form-group select option {
+  background: #181820;
+
+  color: #f8fafc;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.cj-form-group textarea {
+  min-height: 150px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   FORM HINT
+========================================= */
+
+.cj-form-group small {
+  color: #64748b;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   SALARY WRAPPER
+========================================= */
+
+.cj-salary-wrapper {
+  position: relative;
+
+  width: 100%;
+}
+
+.cj-salary-wrapper span {
+  position: absolute;
+
+  left: 14px;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  pointer-events: none;
+}
+
+.cj-salary-wrapper input {
+  padding-left: 30px;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.cj-error {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    13px 16px;
+
+  border-radius: 10px;
+
+  border:
+    1px solid
+    rgba(239, 68, 68, 0.3);
+
+  background:
+    rgba(239, 68, 68, 0.08);
+
+  color: #fca5a5;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   SUCCESS
+========================================= */
+
+.cj-success {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    13px 16px;
+
+  border-radius: 10px;
+
+  border:
+    1px solid
+    rgba(34, 197, 94, 0.3);
+
+  background:
+    rgba(34, 197, 94, 0.08);
+
+  color: #86efac;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.cj-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  padding-top: 10px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================================
+   CANCEL
+========================================= */
+
+.cj-cancel {
+  padding:
+    13px 24px;
+
+  border:
+    1px solid
+    #272733;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.cj-cancel:hover {
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  color: #f8fafc;
+
+  border-color: #475569;
+}
+
+
+/* =========================================
+   SUBMIT
+========================================= */
+
+.cj-submit {
+  padding:
+    13px 28px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8b5cf6,
+      #6366f1
+    );
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  box-shadow:
+    0 10px 25px
+    rgba(99, 102, 241, 0.2);
+}
+
+.cj-submit:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(99, 102, 241, 0.3);
+}
+
+.cj-submit:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.cj-loading {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* =========================================
+   SPINNER
+========================================= */
+
+.cj-spinner {
+  width: 15px;
+
+  height: 15px;
+
+  border:
+    2px solid
+    rgba(255, 255, 255, 0.3);
+
+  border-top-color: white;
+
+  border-radius: 50%;
+
+  animation:
+    cj-spin
+    0.7s linear infinite;
+}
+
+@keyframes cj-spin {
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .cj-sidebar {
+    width: 220px;
+
+    min-width: 220px;
+  }
+
+  .cj-main {
+    width:
+      calc(100% - 220px);
+
+    margin-left: 220px;
+
+    padding:
+      30px;
+  }
+
+  .cj-card {
+    padding:
+      28px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .cj-sidebar {
+    width: 70px;
+
+    min-width: 70px;
+
+    padding:
+      20px 10px;
+  }
+
+  .cj-logo {
+    padding: 0;
+
+    margin-bottom: 35px;
+
+    text-align: center;
+
+    font-size: 0;
+  }
+
+  .cj-logo::before {
+    content: "C";
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    color: #8b5cf6;
+  }
+
+  .cj-menu-item {
+    justify-content: center;
+
+    padding:
+      13px 8px;
+
+    font-size: 0;
+  }
+
+  .cj-menu-item span {
+    font-size: 18px;
+  }
+
+  .cj-main {
+    width:
+      calc(100% - 70px);
+
+    margin-left: 70px;
+
+    padding:
+      25px 15px;
+  }
+
+  .cj-header h1 {
+    font-size: 26px;
+  }
+
+  .cj-card {
+    padding:
+      22px;
+
+    border-radius: 15px;
+  }
+
+  .cj-form-row {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+  .cj-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cj-cancel,
+  .cj-submit {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .cj-main {
+    padding:
+      20px 12px;
+  }
+
+  .cj-card {
+    padding:
+      18px;
+  }
+
+  .cj-header h1 {
+    font-size: 23px;
+  }
+
+}   

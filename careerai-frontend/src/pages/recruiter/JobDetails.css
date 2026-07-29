@@ -1,0 +1,738 @@
+/* =========================================================
+   CAREERAI JOB DETAILS
+   ========================================================= */
+
+.careerai-jobdetails-page {
+  min-height: 100vh;
+
+  display: flex;
+
+  background: #f5f7fb;
+
+  color: #1f2937;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.careerai-jobdetails-sidebar {
+  width: 250px;
+  min-height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px 18px;
+
+  box-sizing: border-box;
+
+  background: #111827;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.careerai-jobdetails-logo {
+  padding: 0 14px;
+
+  margin-bottom: 45px;
+
+  font-size: 27px;
+
+  font-weight: 800;
+}
+
+.careerai-jobdetails-logo span {
+  color: #6366f1;
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.careerai-jobdetails-menu {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.careerai-jobdetails-menu-item {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 13px 15px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #cbd5e1;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition: 0.2s ease;
+}
+
+.careerai-jobdetails-menu-item span {
+  width: 22px;
+
+  text-align: center;
+
+  font-size: 18px;
+}
+
+.careerai-jobdetails-menu-item:hover {
+  background: #1f2937;
+
+  color: #ffffff;
+}
+
+.careerai-jobdetails-menu-item.active {
+  background: #4f46e5;
+
+  color: #ffffff;
+}
+
+.careerai-jobdetails-sidebar-bottom {
+  margin-top: auto;
+}
+
+.careerai-jobdetails-menu-item.logout {
+  color: #fca5a5;
+}
+
+.careerai-jobdetails-menu-item.logout:hover {
+  background: #3f1d1d;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.careerai-jobdetails-main {
+  margin-left: 250px;
+
+  width: calc(100% - 250px);
+
+  min-height: 100vh;
+
+  padding: 40px 50px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BACK
+   ========================================================= */
+
+.careerai-jobdetails-back {
+  border: none;
+
+  background: transparent;
+
+  color: #4f46e5;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  padding: 0;
+
+  margin-bottom: 20px;
+}
+
+.careerai-jobdetails-back:hover {
+  color: #3730a3;
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.careerai-jobdetails-error {
+  padding: 14px 18px;
+
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+
+  background: #fef2f2;
+
+  border: 1px solid #fecaca;
+
+  color: #b91c1c;
+}
+
+.careerai-jobdetails-success {
+  padding: 14px 18px;
+
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+
+  background: #ecfdf5;
+
+  border: 1px solid #a7f3d0;
+
+  color: #047857;
+}
+
+
+/* =========================================================
+   HEADER CARD
+   ========================================================= */
+
+.careerai-jobdetails-header-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 30px;
+
+  margin-bottom: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 6px 22px rgba(15, 23, 42, 0.04);
+}
+
+.careerai-jobdetails-company-icon {
+  width: 75px;
+  height: 75px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: #eef2ff;
+
+  color: #4f46e5;
+
+  font-size: 32px;
+
+  font-weight: 800;
+}
+
+.careerai-jobdetails-header-content h1 {
+  margin: 0 0 8px;
+
+  font-size: 30px;
+
+  color: #111827;
+}
+
+.careerai-jobdetails-header-content h3 {
+  margin: 0 0 15px;
+
+  color: #4f46e5;
+
+  font-size: 17px;
+}
+
+.careerai-jobdetails-meta {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px 22px;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.careerai-jobdetails-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    360px;
+
+  gap: 25px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.careerai-jobdetails-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.careerai-jobdetails-section {
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.03);
+}
+
+.careerai-jobdetails-section h2 {
+  margin: 0 0 16px;
+
+  color: #111827;
+
+  font-size: 20px;
+}
+
+.careerai-jobdetails-section p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  white-space: pre-line;
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.careerai-jobdetails-skills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+}
+
+.careerai-jobdetails-skills span {
+  padding: 7px 12px;
+
+  border-radius: 7px;
+
+  background: #eef2ff;
+
+  color: #4f46e5;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.careerai-jobdetails-right {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.careerai-jobdetails-summary-card {
+  padding: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.03);
+}
+
+.careerai-jobdetails-summary-card h2 {
+  margin: 0 0 20px;
+
+  font-size: 19px;
+
+  color: #111827;
+}
+
+.careerai-jobdetails-summary-item {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.careerai-jobdetails-summary-item:last-child {
+  border-bottom: none;
+}
+
+.careerai-jobdetails-summary-item span {
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+.careerai-jobdetails-summary-item strong {
+  color: #374151;
+
+  font-size: 13px;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   APPLY CARD
+   ========================================================= */
+
+.careerai-jobdetails-apply-card {
+  padding: 25px;
+
+  background: #111827;
+
+  border-radius: 16px;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+.careerai-jobdetails-apply-card h2 {
+  margin: 0 0 10px;
+
+  font-size: 20px;
+}
+
+.careerai-jobdetails-apply-card p {
+  margin: 0 0 20px;
+
+  color: #cbd5e1;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.careerai-jobdetails-apply-card textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px;
+
+  margin-bottom: 15px;
+
+  resize: vertical;
+
+  border: 1px solid #374151;
+
+  border-radius: 9px;
+
+  background: #1f2937;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  outline: none;
+}
+
+.careerai-jobdetails-apply-card textarea::placeholder {
+  color: #9ca3af;
+}
+
+.careerai-jobdetails-apply-card textarea:focus {
+  border-color: #6366f1;
+}
+
+.careerai-jobdetails-apply-button {
+  width: 100%;
+
+  padding: 13px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #6366f1;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.careerai-jobdetails-apply-button:hover {
+  background: #818cf8;
+
+  transform: translateY(-1px);
+}
+
+.careerai-jobdetails-apply-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.careerai-jobdetails-loading {
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #f5f7fb;
+
+  color: #6b7280;
+}
+
+.careerai-jobdetails-spinner {
+  width: 42px;
+  height: 42px;
+
+  border: 4px solid #e5e7eb;
+
+  border-top-color: #4f46e5;
+
+  border-radius: 50%;
+
+  animation:
+    careerai-jobdetails-spin 0.8s linear infinite;
+}
+
+@keyframes careerai-jobdetails-spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   NOT FOUND
+   ========================================================= */
+
+.careerai-jobdetails-notfound {
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #f5f7fb;
+
+  padding: 30px;
+}
+
+.careerai-jobdetails-notfound-icon {
+  font-size: 50px;
+
+  margin-bottom: 15px;
+}
+
+.careerai-jobdetails-notfound h2 {
+  margin: 0 0 10px;
+
+  color: #111827;
+}
+
+.careerai-jobdetails-notfound p {
+  margin: 0 0 25px;
+
+  color: #6b7280;
+}
+
+.careerai-jobdetails-notfound button {
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #4f46e5;
+
+  color: #ffffff;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .careerai-jobdetails-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .careerai-jobdetails-right {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .careerai-jobdetails-page {
+    display: block;
+  }
+
+  .careerai-jobdetails-sidebar {
+    position: relative;
+
+    width: 100%;
+
+    min-height: auto;
+  }
+
+  .careerai-jobdetails-main {
+    width: 100%;
+
+    margin-left: 0;
+
+    padding: 25px 18px;
+  }
+
+  .careerai-jobdetails-header-card {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .careerai-jobdetails-header-content h1 {
+    font-size: 25px;
+  }
+
+  .careerai-jobdetails-right {
+    display: flex;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .careerai-jobdetails-main {
+    padding: 20px 12px;
+  }
+
+  .careerai-jobdetails-header-card {
+    padding: 20px;
+  }
+
+  .careerai-jobdetails-section {
+    padding: 20px;
+  }
+
+  .careerai-jobdetails-summary-card,
+  .careerai-jobdetails-apply-card {
+    padding: 20px;
+  }
+
+  .careerai-jobdetails-meta {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+}
